@@ -17,7 +17,7 @@ node {
 
     stage "Build"
         
-        app = docker.build("${imageName}","--build-arg -f applications/hello-kenzan/Dockerfile applications/hello-kenzan")
+        app = docker.build("${imageName}","-f applications/hello-kenzan/Dockerfile applications/hello-kenzan")
         
     stage "Push"
         
